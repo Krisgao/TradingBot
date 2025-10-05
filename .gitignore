@@ -1,0 +1,24 @@
+# virtual environment
+.venv/
+
+# logs
+logs/
+*.txt
+
+# images / backtest plots
+*.png
+
+# local symbols and config
+symbol/
+config.py
+
+# saved entry price
+entry_price.json
+
+# PyCharm and system files
+__pycache__/
+*.pyc
+*.pyo
+.idea/
+.DS_Store
+

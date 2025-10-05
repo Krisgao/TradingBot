@@ -68,11 +68,35 @@ python main.py --mode backtest --strategy sma
 
 ### 🔴 Live trading (Paper mode) | 启动实盘（纸上测试）
 
-> ⚠️ 请确保在 `config.py` 中配置好你的交易 API 密钥
+️ 请确保你已经在 `config.py` 中配置好了 API 密钥：
+
+```python
+# config.py
+API_KEY = "your_api_key"
+API_SECRET = "your_api_secret"
+BASE_URL = "https://paper-api.alpaca.markets"
+```
+
+✅ 启动交易机器人（使用默认配置：`HybridStrategy`策略 + Alpaca Paper 模拟账户）：
 
 ```bash
-python main.py --mode live --strategy hybrid
+python main.py
 ```
+
+> 默认行为：
+>
+> * 使用策略：`HybridStrategy`
+> * 使用模拟账户：`paper=True`
+> * 自动读取股票列表文件：`symbol/symbols.txt`
+>
+> 如需切换策略，请在 `main.py` 修改：
+>
+> ```python
+> # strategy = SMAStrategy(API_KEY, API_SECRET)
+> # strategy = RSIStrategy(API_KEY, API_SECRET)
+> strategy = HybridStrategy(API_KEY, API_SECRET)
+> ```
+
 
 ---
 

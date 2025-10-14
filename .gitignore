@@ -11,6 +11,7 @@ logs/
 # local symbols and config
 symbol/
 config.py
+notifier.py
 
 # saved entry price
 entry_price.json

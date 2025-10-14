@@ -1,4 +1,4 @@
-# 🤖 TradingBot | 多资产智能交易机器人
+# 🤖SETPOINT TradingBot | 基准点 交易机器人
 
 🚀 A smart multi-asset trading bot powered by Python, built for live trading and backtesting.  
 🚀 一个由 Python 构建的智能多标的交易机器人，支持实盘交易与回测。

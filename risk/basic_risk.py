@@ -59,3 +59,12 @@ class BasicRiskManager:
 
     def get_entry_price(self, symbol):
         return self.entry_price.get(symbol)
+
+    def should_take_intraday_profit(self, entry_price, current_price, threshold=1.0):
+        """
+        如果当前盈利超过 threshold（百分比），返回 True。
+        """
+        if entry_price is None:
+            return False
+        change_pct = (current_price - entry_price) / entry_price * 100
+        return change_pct >= threshold

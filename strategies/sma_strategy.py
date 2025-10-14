@@ -10,7 +10,7 @@ class SMAStrategy:
 
     def get_signal(self, symbol: str) -> str:
         end = datetime.now()
-        start = end - timedelta(days=10)
+        start = end - timedelta(days=20)
 
         request = StockBarsRequest(
             symbol_or_symbols=symbol,
